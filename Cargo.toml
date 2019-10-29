@@ -1,0 +1,11 @@
+[package]
+name = "rust-wasm-simple"
+version = "0.1.0"
+authors = ["Marco Munizaga <marco@marcopolo.io>"]
+edition = "2018"
+
+[lib]
+crate-type = ["cdylib"]
+
+
+[dependencies]

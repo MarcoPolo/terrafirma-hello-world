@@ -20,8 +20,9 @@ pub fn server(_req: &Request<Vec<u8>>) -> Result<Response<Vec<u8>>, Box<dyn std:
 fn server_(req: &Request<Vec<u8>>) -> Response<Vec<u8>> {
     match server(req) {
         Ok(resp) => resp,
-        Err(e) => {
-            let body = format!("Demo Error: {:?}", e);
+        Err(_) => {
+            // let body = format!("Demo Error: {:?}", e);
+            let body = "Demo Error";
             Response::builder()
                 .status(500)
                 .body(body.as_bytes().to_owned())
